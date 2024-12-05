@@ -33,8 +33,8 @@ func printVersion() {
 
 func main() {
 	// -v, --version flag retrives the currently installed version
-	currentVersionFlag := mainFlagSet.Bool("version", false, "Prints the current version")
-	shortCurrentVersionFlag := mainFlagSet.Bool("v", false, "Prints the current version")
+	currentVersionFlag := flag.Bool("version", false, "Prints the current version")
+	shortCurrentVersionFlag := flag.Bool("v", false, "Prints the current version")
 	flag.Parse()
 
 	if *currentVersionFlag || *shortCurrentVersionFlag {
